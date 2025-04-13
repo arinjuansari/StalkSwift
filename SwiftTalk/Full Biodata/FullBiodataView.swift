@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FullBiodataView4: View {
+struct FullBiodataView: View {
     var student: StudentModel
     @State private var searchQuery = ""
         
@@ -43,7 +43,7 @@ struct FullBiodataView4: View {
             .background(.ultraThinMaterial)
             .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 2)
             
-            ProfileView4(student: student)
+            ProfileView(student: student)
         }
         .toolbar {
             ToolbarItem(placement: .principal) {
@@ -57,5 +57,5 @@ struct FullBiodataView4: View {
 
 
 #Preview {
-    FullBiodataView4(student: StudentModel(id: 0, name: "Aldrivo Rido", shortname: "Aldrivo", birthDay: "20 April", domicile: "Bandung", residence: "Bandung", role: "Design", image: "Andress Iniesta", mentor: 0, sig: [2, 2], hobby: [3, 4, 5]))
+    FullBiodataView(student: StudentModel(id: 0, name: "Aldrivo Rido", shortname: "Aldrivo", birthDay: "20 April", domicile: "Bandung", residence: "Bandung", role: "Design", image: "Andress Iniesta", mentor: 0, sig: [2, 2], hobby: [3, 4, 5]))
 }

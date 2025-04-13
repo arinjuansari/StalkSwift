@@ -61,7 +61,7 @@ struct MentorView: View {
                                 ForEach(studenData.filter({
                                     $0.mentor == selectedMentorIndex
                                 }), id: \.id) { student in
-                                    NavigationLink(destination: FullBiodataView4(student: student)
+                                    NavigationLink(destination: FullBiodataView(student: student)
                                         .navigationBarBackButtonHidden(false)) {
                                             VStack {
                                                 Image(student.image)

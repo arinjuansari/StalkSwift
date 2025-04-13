@@ -54,7 +54,7 @@ struct AllLearnersView: View {
                 } else {
                     List {
                         ForEach(filteredStudents, id: \.id) { item in
-                            NavigationLink(destination: FullBiodataView4(student: item).navigationBarBackButtonHidden(false)) {
+                            NavigationLink(destination: FullBiodataView(student: item).navigationBarBackButtonHidden(false)) {
                                 HStack {
                                     Image(item.image)
                                         .resizable()

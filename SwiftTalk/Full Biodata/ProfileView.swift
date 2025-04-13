@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProfileView4: View {
+struct ProfileView: View {
     var student: StudentModel
     
     @State private var showHobby = false
@@ -152,7 +152,7 @@ struct MiroTag: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView4(student: StudentModel(id: 0, name: "Aldrivo Rido", shortname: "Aldrivo", birthDay: "20 April", domicile: "Bandung", residence: "Bandung", role: "Design", image: "basket", mentor: 0, sig: [2,2,4,5,6,7,1,8], hobby: [3, 4, 5]))
+        ProfileView(student: StudentModel(id: 0, name: "Aldrivo Rido", shortname: "Aldrivo", birthDay: "20 April", domicile: "Bandung", residence: "Bandung", role: "Design", image: "basket", mentor: 0, sig: [2,2,4,5,6,7,1,8], hobby: [3, 4, 5]))
     }
 }
 

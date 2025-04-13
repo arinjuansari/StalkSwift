@@ -63,7 +63,7 @@ struct SIGView: View {
                                     GridItem(.flexible(), spacing: 0)
                                 ], spacing: 0) {
                                     ForEach(filteredStudents(), id: \.id) { student in
-                                        NavigationLink(destination: FullBiodataView4(student: student)
+                                        NavigationLink(destination: FullBiodataView(student: student)
                                             .navigationBarBackButtonHidden(false)) {
                                                 VStack {
                                                     Image(student.image)
