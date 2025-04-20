@@ -19,11 +19,10 @@ struct MentorView: View {
     
     var body: some View {
         ZStack {
-            // Blurry Top Background
             VStack(spacing: 0) {
                 Rectangle()
                     .fill(.ultraThinMaterial)
-                    .frame(height: 225) // Match the height of your top card
+                    .frame(height: 225)
                     .ignoresSafeArea(edges: .top)
                 Spacer()
             }
@@ -52,7 +51,6 @@ struct MentorView: View {
                                 .padding(.bottom, 30)
                         }
                         .frame(width:400, height: 250)
-                        // Keep the blur on the card for visual consistency when not scrolled
                         .background(.ultraThinMaterial)
                         .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 2)
                         
@@ -91,7 +89,6 @@ struct MentorView: View {
             .tabViewStyle(.page(indexDisplayMode: .never))
             .ignoresSafeArea(edges: .bottom)
             
-            // Blurry Bottom Background
             VStack {
                 Spacer()
                 Rectangle()
