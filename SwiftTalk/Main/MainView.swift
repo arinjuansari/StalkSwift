@@ -15,10 +15,6 @@ struct MainView: View {
                     .ignoresSafeArea(edges: .all)
                 VStack(spacing: 20) {
                     HStack {
-                        Image("logo")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 100.0)
                         VStack{
                             Text("StalkSwift")
                                 .font(.title)
@@ -33,12 +29,14 @@ struct MainView: View {
                     }
                     .padding(.top, 50)
                     SearchLearnerView()
-                    Spacer()
                     ScrollSIGCardView()
-                    Spacer()
                     ScrollMentorCardView()
-                    Spacer()
-                    
+                    NavigationLink(destination: CameraView()) {
+                        Text("Wanna scan ID's Learner?")
+                            .frame(width: 350, height: 50)
+                            .background(Color.blue.opacity(0.1))
+                            .cornerRadius(20)
+                    }
                 }
             }
         }
@@ -57,7 +55,7 @@ struct SearchLearnerView: View {
                     HStack (spacing: 10) {
                         Image(systemName: "magnifyingglass")
                             .foregroundColor(.gray)
-                        Text("Search by Learner's Name")
+                        Text("Search Learners by Learner's Name")
                             .foregroundColor(.gray)
                             .font(.system(size:18))
                         
@@ -76,8 +74,8 @@ struct SearchLearnerView: View {
 struct ScrollMentorCardView: View {
     var body: some View {
         VStack (alignment: .leading) {
-            Text("Find By Personal Mentor")
-                .font(.system(size: 20, weight: .bold))
+            Text("Find Learners By Personal Mentor")
+                .font(.system(size: 18, weight: .bold))
                 .padding(.leading, 32)
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: 0) {
@@ -95,7 +93,7 @@ struct ScrollMentorCardView: View {
             }
             .scrollTargetBehavior(.viewAligned)
             .contentMargins(.horizontal, 16, for: .scrollContent)
-
+            
         }
     }
 }
@@ -103,8 +101,8 @@ struct ScrollMentorCardView: View {
 struct ScrollSIGCardView: View {
     var body: some View {
         VStack (alignment: .leading) {
-            Text("Find by Student Interest Group")
-                .font(.system(size: 20, weight: .bold))
+            Text("Find Learners by Student Interest Group")
+                .font(.system(size: 18, weight: .bold))
                 .padding(.leading, 32)
             ScrollView(.horizontal, showsIndicators:false) {
                 LazyHStack(spacing: 0) {
